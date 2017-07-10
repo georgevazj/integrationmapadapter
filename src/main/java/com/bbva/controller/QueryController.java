@@ -18,7 +18,7 @@ import java.net.UnknownHostException;
 public class QueryController {
 
     @Autowired
-    MapService mapService;
+    private MapService mapService;
 
     @RequestMapping(value = "/query", method = RequestMethod.GET)
     public Query getLength(@RequestParam(value = "queue") String queue) throws UnknownHostException {
