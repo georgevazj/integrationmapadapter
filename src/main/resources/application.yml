@@ -1,0 +1,8 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: admin
+      uri: bolt://localhost:7687
+server:
+  port: 8080
