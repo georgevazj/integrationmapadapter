@@ -35,6 +35,8 @@ public class MapServiceImpl implements MapService {
             QueryResult queryResult = new QueryResult(record.get("application").asString(), record.get("service").asString(), record.get("distance").asInt());
             query.getQueryResults().add(queryResult);
         }
+        session.close();
         return query;
     }
+
 }
