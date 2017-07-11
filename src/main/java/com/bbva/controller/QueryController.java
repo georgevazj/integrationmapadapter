@@ -20,7 +20,7 @@ public class QueryController {
     @Autowired
     private MapService mapService;
 
-    @RequestMapping(value = "/query", method = RequestMethod.GET)
+    @RequestMapping(value = "/length", method = RequestMethod.GET)
     public Query getLength(@RequestParam(value = "queue") String queue) throws UnknownHostException {
         return mapService.getQueueLength(queue);
     }
