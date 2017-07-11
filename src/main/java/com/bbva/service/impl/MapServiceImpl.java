@@ -27,6 +27,7 @@ public class MapServiceImpl implements MapService {
 
     @Override
     public Query getQueueLength(String queue) {
+        LOG.info("Getting length from " + queue);
         Session session = driver.session();
         StatementResult result = session.run(String.format(QueryConstant.LENGTH_QUERY,queue));
         Query query = new Query();
